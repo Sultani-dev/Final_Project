@@ -39,7 +39,7 @@ public class ResearchManager {
                         r.getName(), r.getHIndex(), r.getTotalCitations()));
 
         getTopCitedResearcher().ifPresent(r ->
-                System.out.println("\n🏆 Top Cited Researcher: " + r.getName()
+                System.out.println("Top Cited Researcher: " + r.getName()
                         + " (" + r.getTotalCitations() + " citations)"));
         System.out.println();
     }

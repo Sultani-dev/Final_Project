@@ -72,7 +72,7 @@ public class Main {
             project.addParticipant(alice);
             project.addParticipant("John (Bachelor Student)"); // will throw
         } catch (NonResearcherException e) {
-            System.out.println("\n❌ " + e.getMessage());
+            System.out.println("\n " + e.getMessage());
         }
 
         project.printParticipants();
@@ -81,10 +81,10 @@ public class Main {
         System.out.println("--- Supervisor Validation ---");
         try {
             drSmith.validateAsSupervisor();
-            System.out.println("✅ " + drSmith.getName() + " approved as supervisor.");
+            System.out.println(drSmith.getName() + " approved as supervisor.");
             drLow.validateAsSupervisor(); // will throw
         } catch (LowHIndexException e) {
-            System.out.println("❌ " + e.getMessage());
+            System.out.println(e.getMessage());
         }
 
         List<Researcher> allResearchers = new ArrayList<>(
